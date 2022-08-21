@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+	<div>
+    	<header></header>	    
+		<div>
+		    <h1>Results</h1>
+		    <div class="display-table">
+	<table id="results_table" align="center">
+		<tr>
+			<th>Song Title</th><th>Artist Name</th><th>Album Name</th><th>Link to Lyrics</th>
+		</tr>
+		{% for row in csv %}
+		<tr>
+		{% for col in row.split('","') %}
+		<td>{{ col }}</td>
+		{% endfor %}
+		</tr>
+		{% endfor %}
+	</table>
+			</div>
+		</div>
+
+	    <footer>
+			<p>By Israel Ike Friedman in Python3 and Flask</p>
+		</footer>
+	</div>
+
+{% endblock %}
