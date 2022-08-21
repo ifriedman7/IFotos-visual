@@ -7,6 +7,7 @@ import boto3
 from botocore.exceptions import ClientError
 import requests
 from requests_aws4auth import AWS4Auth
+#need pip install requests-aws4auth
 
 region = 'us-east-1' # e.g. us-west-1
 service = 'eks'
