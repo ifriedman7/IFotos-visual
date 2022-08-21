@@ -5,6 +5,13 @@ import re
 
 import boto3
 from botocore.exceptions import ClientError
+import requests
+from requests_aws4auth import AWS4Auth
+
+region = 'us-east-1' # e.g. us-west-1
+service = 'eks'
+credentials = boto3.Session().get_credentials()
+awsauth = AWS4Auth(credentials.access_key, credentials.secret_key, region, service, session_token=credentials.token)
 
 
 eks = boto3.client('eks')
