@@ -4,14 +4,13 @@ import sys
 import re
 
 import boto3
-from boto3.s3.transfer import S3UploadFailedError
 from botocore.exceptions import ClientError
 
 
-s3 = boto3.client('s3')
+eks = boto3.client('eks')
 
 try:
-    response = s3.list_clusters()
+    response = eks.list_clusters()
     print(f"List is \n{response}\n")
 except ClientError as err:
     print(f"Couldn't get the list.")
