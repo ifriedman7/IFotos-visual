@@ -6,12 +6,12 @@
     	<header></header>	    
 		<div>
 		    <h1>IFotos Visual</h1>
-		    <div class="information-content">
-			<form action="/my_query/" method="POST">
-			<button name="forwardBtn" type="submit">Search</button>
-				<input name="query_text">
-				</form>
-			</div>
+	{% if cluster_up = True %}
+	<green>The ike-eks-cluster is up!</green>
+	{% endif %}
+	{% if cluster_up = False %}
+	<red>The ike-eks-cluster is down!</red>
+	{% endif %}
 		</div>
 
 	    <footer>

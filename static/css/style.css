@@ -46,7 +46,16 @@ h1{
     margin-bottom: 50px;
     color: #2E6DA4;
 }
-
+green{
+	font-family: Sans-serif;
+	font-size: 18px;
+	color: #228B22; /*forest green*/
+}
+red{
+	font-family: Sans-serif;
+	font-size: 18px;
+	color: #FF0000; /*red*/
+}
 
 footer{
     position: relative;
