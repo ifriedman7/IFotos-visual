@@ -24,3 +24,9 @@ try:
 except ClientError as err:
     print(f"Couldn't get the list.")
     print(f"\t{err.response['Error']['Code']}:{err.response['Error']['Message']}")
+if 'ike-eks-cluster' in cluster_list:
+    print(f"Cluster is up.")
+    cluster_up = True
+else:
+    print(f"Cluster is down.")
+    cluster_up = False
