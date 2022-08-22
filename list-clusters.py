@@ -19,7 +19,8 @@ eks = boto3.client('eks')
 
 try:
     response = eks.list_clusters()
-    print(f"List is \n{response[clusters]}\n")
+    cluster_list = response['clusters']
+    print(f"List is \n{cluster_list}\n")
 except ClientError as err:
     print(f"Couldn't get the list.")
     print(f"\t{err.response['Error']['Code']}:{err.response['Error']['Message']}")
