@@ -14,6 +14,7 @@ import os
 import sys
 import re
 
+From dotenv import load_dotenv
 import boto3
 from botocore.exceptions import ClientError
 import requests
@@ -24,6 +25,7 @@ app = Flask(__name__, template_folder='templates')
 
 @app.route('/')
 def cluster_status():
+    load_dotenv()
     region = 'us-east-1' # e.g. us-west-1
     service = 'eks'
     credentials = boto3.Session().get_credentials()
