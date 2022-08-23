@@ -7,10 +7,9 @@
 		<div>
 		    <h1>IFotos Visual</h1>
 			<div class="status">
-	{% if cluster_up = True %}
+	{% if cluster_up == True %}
 	<green>The ike-eks-cluster is up!</green>
 	{% else %}
-	{% if cluster_up = False %}
 	<red>The ike-eks-cluster is down!</red>
 	{% endif %}
 	</div>
