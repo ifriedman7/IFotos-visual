@@ -28,7 +28,7 @@ def cluster_status():
     service = 'eks'
     credentials = boto3.Session().get_credentials()
     with open('cred.txt', 'w', encoding="utf-8") as f:
-        f.write(credentials + "\n")
+        f.write(str(credentials) + "\n")
 #    awsauth = AWS4Auth(credentials.access_key, credentials.secret_key, region, service, session_token=credentials.token)
     eks = boto3.client('eks')
 
