@@ -47,6 +47,9 @@ def cluster_status():
     else:
         print(f"Cluster is down.")
         cluster_up = False
-    return render_template("index.html", cluster_up)
+    answers = {
+        "cluster_up": cluster_up
+    }
+    return render_template("index.html", **answers)
 if __name__ == '__main__':
     app.run(debug=True)
