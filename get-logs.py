@@ -1,3 +1,5 @@
+#python3 -m pip install s3cmd
+#python3 -m pip install boto3
 import io
 import os
 import sys
